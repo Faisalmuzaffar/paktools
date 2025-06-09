@@ -1,8 +1,3 @@
-import { InitialValuesType } from './types';
-
-export function main(
-  input: File | null,
-  options: InitialValuesType
-): File | null {
+export function main(input: File | null): File | null {
   return input;
 }

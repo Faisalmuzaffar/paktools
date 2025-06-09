@@ -3,7 +3,6 @@ import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { CardExampleType } from '@components/examples/ToolExamples';
 import { loopVideo } from './service';
 import { InitialValuesType } from './types';
 import ToolVideoInput from '@components/input/ToolVideoInput';
