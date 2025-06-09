@@ -54,9 +54,6 @@ export function groupList(
   paddingChar: string = ''
 ): string {
   let array: string[];
-  let splitedArray: string[][];
-  let fullSplitedArray: string[][];
-  let result: string[];
   switch (splitOperatorType) {
     case 'symbol':
       array = input.split(splitSeparator);
@@ -71,10 +68,10 @@ export function groupList(
   }
 
   // split the input into an array of subArray with the desired length
-  splitedArray = groupMaker(array, groupNumber);
+  const splitedArray = groupMaker(array, groupNumber);
 
   // fill the last subArray is PadNonFullGroup is enabled
-  fullSplitedArray = groupFiller(
+  const fullSplitedArray = groupFiller(
     splitedArray,
     groupNumber,
     padNonFullGroup,
@@ -82,7 +79,7 @@ export function groupList(
   );
 
   // get the list of formated subArray with the item separator and left and right wrapper
-  result = groupJoinerAndWrapper(
+  const result = groupJoinerAndWrapper(
     fullSplitedArray,
     itemSeparator,
     leftWrap,

@@ -83,7 +83,7 @@ function createLinearGradient(
   ctx: CanvasRenderingContext2D,
   options: OpacityOptions
 ) {
-  const { areaLeft, areaTop, areaWidth, areaHeight } = options;
+  const { areaLeft, areaTop, areaWidth } = options;
   const gradient = ctx.createLinearGradient(
     areaLeft,
     areaTop,

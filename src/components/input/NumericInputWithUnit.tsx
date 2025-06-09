@@ -158,7 +158,6 @@ export default function NumericInputWithUnit(props: {
         <Select
           fullWidth
           disabled={disableChangingUnit}
-          placeholder={'Unit'}
           sx={{ width: { xs: '75%', sm: '80%', md: '90%' } }}
           value={unit}
           onChange={(event) => {

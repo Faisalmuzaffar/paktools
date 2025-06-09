@@ -1,0 +1,12 @@
+# Generated/third-party files
+**/ghostscript/*.js
+src/lib/ghostscript/gs-worker.js
+src/lib/ghostscript/background-worker.js
+
+# Build outputs
+dist/
+build/
+node_modules/
+
+# Test files with known issues
+**/*.e2e.spec.ts

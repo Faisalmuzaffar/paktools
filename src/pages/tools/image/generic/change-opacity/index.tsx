@@ -105,7 +105,7 @@ export default function ChangeOpacity({ title }: ToolComponentProps) {
         <ToolFileResult title={'Changed image'} value={result} />
       }
       initialValues={initialValues}
-      // exampleCards={exampleCards}
+      exampleCards={exampleCards}
       getGroups={({ values, updateField }) => [
         {
           title: 'Opacity Settings',

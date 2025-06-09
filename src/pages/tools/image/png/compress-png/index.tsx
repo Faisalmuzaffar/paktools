@@ -1,6 +1,5 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
-import * as Yup from 'yup';
 import ToolImageInput from '@components/input/ToolImageInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
@@ -12,9 +11,6 @@ import { ToolComponentProps } from '@tools/defineTool';
 const initialValues = {
   rate: '50'
 };
-const validationSchema = Yup.object({
-  // splitSeparator: Yup.string().required('The separator is required')
-});
 
 export default function ChangeColorsInPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);

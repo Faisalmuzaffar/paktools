@@ -1,7 +1,6 @@
-import { Box, Button, styled, useTheme } from '@mui/material';
+import { Box, Button, styled } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import ToolBreadcrumb from './ToolBreadcrumb';
-import { capitalizeFirstLetter } from '../utils/string';
 import Grid from '@mui/material/Grid';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
@@ -23,8 +22,6 @@ interface ToolHeaderProps {
 }
 
 function ToolLinks() {
-  const theme = useTheme();
-
   const scrollToElement = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };

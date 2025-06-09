@@ -4,7 +4,6 @@ import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolPdfInput from '@components/input/ToolPdfInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
 import { CompressionLevel, InitialValuesType } from './types';
 import { compressPdf } from './service';
@@ -15,40 +14,7 @@ const initialValues: InitialValuesType = {
   compressionLevel: 'medium'
 };
 
-const exampleCards: CardExampleType<InitialValuesType>[] = [
-  {
-    title: 'Low Compression',
-    description: 'Slightly reduce file size with minimal quality loss',
-    sampleText: '',
-    sampleResult: '',
-    sampleOptions: {
-      compressionLevel: 'low'
-    }
-  },
-  {
-    title: 'Medium Compression',
-    description: 'Balance between file size and quality',
-    sampleText: '',
-    sampleResult: '',
-    sampleOptions: {
-      compressionLevel: 'medium'
-    }
-  },
-  {
-    title: 'High Compression',
-    description: 'Maximum file size reduction with some quality loss',
-    sampleText: '',
-    sampleResult: '',
-    sampleOptions: {
-      compressionLevel: 'high'
-    }
-  }
-];
-
-export default function CompressPdf({
-  title,
-  longDescription
-}: ToolComponentProps) {
+export default function CompressPdf({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [resultSize, setResultSize] = useState<string>('');

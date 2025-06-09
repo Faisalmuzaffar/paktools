@@ -1,6 +1,6 @@
 import { InitialValuesType } from './types';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile, toBlobURL } from '@ffmpeg/util';
+import { fetchFile } from '@ffmpeg/util';
 
 export const processImage = async (
   file: File,
@@ -148,7 +148,11 @@ export const processImage = async (
       const data = await ffmpeg.readFile('output.gif');
 
       // Create a new File object
-      return new File([data], file.name, { type: 'image/gif' });
+      return new File(
+        [new Uint8Array(data as unknown as ArrayBuffer)],
+        file.name,
+        { type: 'image/gif' }
+      );
     } catch (error) {
       console.error('Error processing GIF with FFmpeg:', error);
       // Fall back to canvas method if FFmpeg processing fails

@@ -3,6 +3,7 @@ import routesConfig from '../config/routesConfig';
 import Navbar from './Navbar';
 import { Suspense, useMemo, useState } from 'react';
 import Loading from './Loading';
+import StartupAnimation from './StartupAnimation';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { CustomSnackBarProvider } from '../contexts/CustomSnackBarContext';
 import { SnackbarProvider } from 'notistack';
@@ -22,7 +23,27 @@ function App() {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return localStorage.getItem('theme') === 'dark';
   });
+  const [showStartupAnimation, setShowStartupAnimation] = useState<boolean>(
+    () => {
+      // Show startup animation only on first visit or when explicitly requested
+      return !sessionStorage.getItem('hasSeenStartupAnimation');
+    }
+  );
   const theme = useMemo(() => (darkMode ? darkTheme : lightTheme), [darkMode]);
+
+  const handleAnimationComplete = () => {
+    setShowStartupAnimation(false);
+    sessionStorage.setItem('hasSeenStartupAnimation', 'true');
+  };
+
+  if (showStartupAnimation) {
+    return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <StartupAnimation onComplete={handleAnimationComplete} />
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider theme={theme}>

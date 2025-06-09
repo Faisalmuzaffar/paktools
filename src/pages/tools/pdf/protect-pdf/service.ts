@@ -1,9 +1,5 @@
-import { PDFDocument } from 'pdf-lib';
 import { InitialValuesType } from './types';
-import {
-  compressWithGhostScript,
-  protectWithGhostScript
-} from '../../../../lib/ghostscript/worker-init';
+import { protectWithGhostScript } from '../../../../lib/ghostscript/worker-init';
 import { loadPDFData } from '../utils';
 
 /**

@@ -14,10 +14,7 @@ const initialValues: InitialValuesType = {
   confirmPassword: ''
 };
 
-export default function ProtectPdf({
-  title,
-  longDescription
-}: ToolComponentProps) {
+export default function ProtectPdf({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);

@@ -1,4 +1,4 @@
-import { Box, Stack, useTheme } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Typography from '@mui/material/Typography';
 import React, { ReactNode } from 'react';
@@ -20,7 +20,6 @@ export default function ToolOptions<T extends FormikValues>({
   getGroups: GetGroupsType<T> | null;
   vertical?: boolean;
 }) {
-  const theme = useTheme();
   const formikContext = useFormikContext<T>();
 
   // Early return if no groups to display

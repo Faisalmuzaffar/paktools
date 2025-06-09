@@ -6,8 +6,6 @@ import { convertCsvToJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { Box } from '@mui/material';
-import RadioWithTextField from '@components/options/RadioWithTextField';
-import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 

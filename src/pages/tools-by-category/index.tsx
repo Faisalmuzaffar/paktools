@@ -4,13 +4,10 @@ import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { filterTools, getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import { capitalizeFirstLetter } from '@utils/string';
 import { Icon } from '@iconify/react';
 import { categoriesColors } from 'config/uiConfig';
 import React, { useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
-import { ArrowBack } from '@mui/icons-material';
-import BackButton from '@components/BackButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 

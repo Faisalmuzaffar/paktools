@@ -1,3 +1,5 @@
 
 User-Agent: *
 Allow: /
+
+Sitemap: https://paktools.vercel.app/sitemap.xml

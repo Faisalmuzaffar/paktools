@@ -10,6 +10,7 @@ function interweave(array1: string[], array2: string[]) {
   }
   return result;
 }
+
 function duplicate(
   input: string[],
   concatenate: boolean,
@@ -65,7 +66,6 @@ export function duplicateList(
   copy?: number
 ): string {
   let array: string[];
-  let result: string[];
   switch (splitOperatorType) {
     case 'symbol':
       array = input.split(splitSeparator);
@@ -76,6 +76,6 @@ export function duplicateList(
         .filter((item) => item !== '');
       break;
   }
-  result = duplicate(array, concatenate, reverse, copy);
+  const result = duplicate(array, concatenate, reverse, copy);
   return result.join(joinSeparator);
 }

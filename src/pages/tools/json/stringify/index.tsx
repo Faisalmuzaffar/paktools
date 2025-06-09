@@ -8,7 +8,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import { isNumber, updateNumberField } from '@utils/string';
+import { updateNumberField } from '@utils/string';
 import { CardExampleType } from '@components/examples/ToolExamples';
 
 type InitialValuesType = {
